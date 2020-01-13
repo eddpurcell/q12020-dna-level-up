@@ -13,7 +13,12 @@ def main():
 
     if args.input1 == 'full':
         print('Downloading full data...')
-        subprocess.run(['gsutil', 'cp', 'gs://slalom-level-up-q1-2020/data/*.csv', '.'])
+        subprocess.run(['gsutil', 'cp', 'gs://slalom-level-up-q1-2020/data/citibike_stations.csv', '.'])
+        for i in range(0,19):
+            if i < 10:
+                subprocess.run(['gsutil', 'cp', f'gs://slalom-level-up-q1-2020/data/citibike_trips_00000000000{i}.csv', '.'])
+            else:
+                subprocess.run(['gsutil', 'cp', f'gs://slalom-level-up-q1-2020/data/citibike_trips_0000000000{i}.csv', '.'])
 
 if __name__ == '__main__':
     main()
