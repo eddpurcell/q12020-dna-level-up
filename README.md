@@ -1,4 +1,4 @@
-# Q12020 D&A Level Up Competition
+# Q1 2020 D&A Level Up Competition
 
 The ```download_data.py``` file is provided to access the data for the competition. 
 
